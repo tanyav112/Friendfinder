@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>FriendFinder</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+  <form>
+    <div class="form-group">
+      <h2>Survey Questions</h2>
+      <h3><strong>About You</strong></h3>
+      <label for="nameInput">Name (Required)</label>
+      <input type="name" id="name" class="form-control" id="nameInput" aria-describedby="nameHelp" placeholder="Enter Name">
+    </div>
+    <div class="form-group">
+      <label for="linkInput">Link to Photo Image (Required)</label>
+      <input type="link" class="form-control" id="linkInput" placeholder="link to Photo Image">
+    </div>
+  
+    <h3><strong>Question 1</strong></h3>
+    <h4>You see yourself as extraverted, enthusiastic.</h4>
+      <select id="q1" class="form-control">
+        <option>Select an Option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <h3><strong>Question 2</strong></h3>
+      <h4>You see yourself as dependable, self-disciplined.</h4>
+      <select id="q2" class="form-control">
+        <option>Select an Option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <h3><strong>Question 3</strong></h3>
+      <h4>You see yourself as open to new experiences.</h4>
+      <select id="q3" class="form-control">
+        <option>Select an Option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <h3><strong>Question 4</strong></h3>
+      <h4>Your mood can change very quickly.</h4>
+      <select id="q4" class="form-control">
+        <option>Select an Option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <h3><strong>Question 5</strong></h3>
+      <h4>You often get so lost in thoughts that you ignore or forget your surroundings.</h4>
+      <select id="q5" class="form-control">
+        <option>Select an Option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <h3><strong>Question 6</strong></h3>
+      <h4>You try to respond to your e-mails as soon as possible and cannot stand a messy inbox.</h4>
+      <select id="q6" class="form-control">
+        <option>Select an Option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <h3><strong>Question 7</strong></h3>
+      <h4>You find it easy to stay relaxed even when there is some pressure.</h4>
+      <select id="q7" class="form-control">
+        <option>Select an Option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <h3><strong>Question 8</strong></h3>
+      <h4>You rarely do something just out of sheer curiosity.</h4>
+      <select id="q8" class="form-control">
+        <option>Select an Option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <h3><strong>Question 9</strong></h3>
+      <h4>Winning a debate matters less to you than making sure no one gets upset.</h4>
+      <select id="q9" class="form-control">
+        <option>Select an Option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <h3><strong>Question 10</strong></h3>
+      <h4>You do not mind being at the center of attention.</h4>
+      <select id="q10" class="form-control">
+        <option>Select an Option</option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <button onclick="newUserInput()" type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+   </div>
+  </form>
+ 
+    <footer class="footer">
+      <div class="container">
+        <p><a href="../friends">API Friends List</a> | <a href="/api/waitlist">GitHub Repo</a>
+      </div>
+    </footer>
+</div>
+
+<!--modal for displaying match-->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <h4>Friend Match</h4>
+      <div class="divider"></div>
+      <h5 id="matchName"></h5>
+      <img id="matchImage" class="materialboxed" width="650" height="650" src="">
+    <a href="/survey" class="modal-action modal-close btn-flat">Fill Again!</a>
+    </div>   
+  </div>
+
+<script>
+  const newUserInput = () => {
+    event.preventDefault()
+    const modal = document.getElementById('myModal');
+    fetch ('/friends', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json; Charset=utf-8'},
+      body: JSON.stringify({
+        name: document.querySelector('#name').value,
+        photo: document.querySelector('#linkInput').value,
+        scores: [
+          document.querySelector("#q1").value,
+          document.querySelector("#q2").value,
+          document.querySelector("#q3").value,
+          document.querySelector("#q4").value,
+          document.querySelector("#q5").value,
+          document.querySelector("#q6").value,
+          document.querySelector("#q7").value,
+          document.querySelector("#q8").value,
+          document.querySelector("#q9").value,
+          document.querySelector("#q10").value
+       ]
+      }) 
+    })
+  .then(r => r.json()) 
+  .then(r => {
+    console.log(r)
+    document.querySelector("#matchName").append(r.matchName)
+    document.getElementById('matchImage').src = r.matchImage
+    modal.style.display = "block";
+  })
+   .catch (e => console.log(e))
+}
+
+</script>
+</body>
+</html>
